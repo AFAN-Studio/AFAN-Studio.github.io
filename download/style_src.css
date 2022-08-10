@@ -6,11 +6,16 @@
     margin-bottom:5%;
 }
 
+@font-face {
+    font-family: "KaiTi";
+    src: url("../res/SIMKAI.TTF");
+}
+
 #_docs a{
     background-color:#ffffff;
     width:20%;
     height:50px;
-    font-family:KaiTi;
+    font-family:"KaiTi";
     font-size:32px;
     color: #000000;
     border-width:3px;
