@@ -19,6 +19,11 @@
     margin-right: 2%;
 }
 
+@font-face {
+    font-family: "KaiTi";
+    src: url("../res/SIMKAI.TTF");
+}
+
 #_dl_list{
     padding:0;
     margin:0;
@@ -40,6 +45,6 @@
 }
 
 #_dl_list h1{
-    font-family:KaiTi;
+    font-family:"KaiTi";
     text-align: center;
 }
