@@ -10,12 +10,17 @@
     margin-bottom: 2%;
 }
 
+@font-face {
+    font-family: "KaiTi";
+    src: url("../res/SIMKAI.TTF");
+}
+
 #_text div{
     
 }
 
 #_text p{
-    font-family: KaiTi;
+    font-family: "KaiTi";
     font-size: 20px;
     padding-top:1%;
     padding-bottom:1%;
