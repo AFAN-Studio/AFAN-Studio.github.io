@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="md.css" />
+    <script src="back.js"></script>
+    <title>AFAN Studio -- document -- ADos</title>
+  
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+  <style></style>
+</head>
+<body>
+    <button id="_back" onclick=On_Back("../docs_index.html")>返回</button>
+  <article class="markdown-body">
+  <h1 class="atx" id="ados">ADos</h1>
+<pre><code class="fenced-code-block language-cpp">    Sleep <span class="token operator">--</span> 休眠，与MFC中的Sleep的休眠时间相同
+    Printer <span class="token operator">--</span> 打印提示<span class="token operator">:</span>
+      Printer<span class="token operator">::</span>Printer <span class="token operator">--</span> 类的构造函数，用于打印初始化提醒
+      Printer<span class="token operator">::</span><span class="token operator">~</span>Printer <span class="token operator">--</span> 类的析构函数，用于打印退出提醒
+    CProgress <span class="token operator">--</span> ASG库中的用于打印进度条的类，未来会发布<span class="token operator">:</span>
+      CProgress<span class="token operator">::</span>progress_bar <span class="token operator">--</span> 用于打印进度条或者磁盘状况条
+    date <span class="token operator">--</span> 获取日期
+    Logger <span class="token operator">--</span> 写日志文件<span class="token operator">:</span>
+      <span class="token keyword">operator</span><span class="token operator">&gt;&gt;</span> <span class="token operator">--</span> 重定义<span class="token string">"&gt;&gt;"</span>运算符
+    GetUUID <span class="token operator">--</span> 生成UUID（全球唯一）
+    PID <span class="token operator">--</span> 生成进程<span class="token operator">/</span>线程PID
+    MEMORY <span class="token operator">--</span> ADos系统内存管理<span class="token operator">:</span>
+      MEMORY<span class="token operator">::</span>init <span class="token operator">--</span> 初始化内存
+      MEMORY<span class="token operator">::</span>toexit <span class="token operator">--</span> 释放内存
+      MEMORY<span class="token operator">::</span>GetThreadState <span class="token operator">--</span> 获取进程<span class="token operator">/</span>线程状态
+      MEMORY<span class="token operator">::</span>MEMORY <span class="token operator">--</span> 类的构造函数
+      MEMROY<span class="token operator">::</span><span class="token operator">~</span>MEMORY <span class="token operator">--</span> 类的析构函数
+      MEMORY<span class="token operator">::</span>CreateThread <span class="token operator">--</span> 创造进程<span class="token operator">/</span>线程
+      MEMORY<span class="token operator">::</span>ReleaseThread <span class="token operator">--</span> 释放进程<span class="token operator">/</span>线程内存
+      MEMORY<span class="token operator">::</span>RunThread <span class="token operator">--</span> 启动进程<span class="token operator">/</span>线程
+      MEMORY<span class="token operator">::</span>BlockThread <span class="token operator">--</span> 挂起进程<span class="token operator">/</span>线程
+      MEMORY<span class="token operator">::</span>KillThread <span class="token operator">--</span> 杀死进程<span class="token operator">/</span>线程
+      MEMORY<span class="token operator">::</span>showThread <span class="token operator">--</span> 显示正在运行、新建或挂起的进程<span class="token operator">/</span>线程
+      MEMORY<span class="token operator">::</span>GetThreadMessage <span class="token operator">--</span> 获取进程<span class="token operator">/</span>线程信息
+    FAT <span class="token operator">--</span> FAT文件系统<span class="token operator">:</span>
+      FAT<span class="token operator">::</span>init <span class="token operator">--</span> 初始化磁盘
+      FAT<span class="token operator">::</span>getBlock <span class="token operator">--</span> 获取空磁盘
+      FAT<span class="token operator">::</span>addBlock <span class="token operator">--</span> 回收磁盘块
+    FCB<span class="token operator">:</span>
+      FCB<span class="token operator">::</span>FCB <span class="token operator">--</span> 构造函数，用于初始化
+      FCB<span class="token operator">::</span><span class="token operator">~</span>FCB <span class="token operator">--</span> 析构函数
+      FCB<span class="token operator">::</span>setFileAccess <span class="token operator">--</span> 设置文件保护方式<span class="token operator">/</span>类型
+      FCB<span class="token operator">::</span>getTime <span class="token operator">--</span> 获取时间
+        File<span class="token operator">:</span>
+          File<span class="token operator">::</span>File <span class="token operator">--</span> 构造函数
+          File<span class="token operator">::</span><span class="token operator">~</span>File <span class="token operator">--</span> 析构函数
+          File<span class="token operator">::</span>addContent <span class="token operator">--</span> 添加文件
+          File<span class="token operator">::</span>release <span class="token operator">--</span> 释放内存
+          File<span class="token operator">::</span>toString <span class="token operator">--</span> string数组转string
+        Folder<span class="token operator">:</span>
+           Folder<span class="token operator">::</span>addChild <span class="token operator">--</span> 添加子目录
+           Folder<span class="token operator">::</span>Folder <span class="token operator">--</span> 构造函数
+           Folder<span class="token operator">::</span>count <span class="token operator">--</span> 判断是否还有下一个文件夹
+           Folder<span class="token operator">::</span>find <span class="token operator">--</span> 查找文件夹
+           Folder<span class="token operator">::</span>erase <span class="token operator">--</span> 擦除数据
+           Folder<span class="token operator">::</span>size <span class="token operator">--</span> 获取文件夹大小
+    DiskManager <span class="token operator">--</span> 磁盘类
+      DiskManager<span class="token operator">::</span>DiskWrite <span class="token operator">--</span> 创建磁盘文件
+      DiskManager<span class="token operator">::</span>DiskMkdir <span class="token operator">--</span> 创建磁盘文件夹
+      DiskManager<span class="token operator">::</span>DiskRmdir <span class="token operator">--</span> 删除磁盘文件夹
+      DiskManager<span class="token operator">::</span>DiskCkdir <span class="token operator">--</span> 查找目录
+      DiskManager<span class="token operator">::</span>DiskManagers <span class="token operator">--</span> 命令的实现，用于控制磁盘
+      DiskManager<span class="token operator">::</span>GetPath <span class="token operator">--</span> 获取路径（目录）
+      DiskManager<span class="token operator">::</span>AllMEm <span class="token operator">--</span> 获取磁盘空间大小
+      DiskManager<span class="token operator">::</span>usedMem <span class="token operator">--</span> 获取已用磁盘空间
+      DiskManager<span class="token operator">::</span>run <span class="token operator">--</span> run命令实现（暂时保留）
+      DiskManager<span class="token operator">::</span>SFM <span class="token operator">--</span> SFM命令实现
+      DiskManager<span class="token operator">::</span>format <span class="token operator">--</span> 格式化实现
+      DiskManager<span class="token operator">::</span>Mkdir <span class="token operator">--</span> Mkdir命令实现
+      DiskManager<span class="token operator">::</span>Rmdir <span class="token operator">--</span> Rmdir命令实现
+      DiskManager<span class="token operator">::</span>ls <span class="token operator">--</span> ls命令实现
+      DiskManager<span class="token operator">::</span>cd <span class="token operator">--</span> cd命令实现
+      DiskManager<span class="token operator">::</span>create <span class="token operator">--</span> create命令实现，用于创建文件
+      DiskManager<span class="token operator">::</span>open <span class="token operator">--</span> 打开文件
+      DiskManager<span class="token operator">::</span>close <span class="token operator">--</span> 关闭文件
+      DiskManager<span class="token operator">::</span>write <span class="token operator">--</span> 写文件
+      DiskManager<span class="token operator">::</span>read <span class="token operator">--</span> 读文件
+      DiskManager<span class="token operator">::</span>rm <span class="token operator">--</span> 删除文件
+      DiskManager<span class="token operator">::</span>input <span class="token operator">--</span> 用于输入命令
+      DiskManager<span class="token operator">::</span>DiskManager <span class="token operator">--</span> 构造函数，初始化磁盘
+    Register <span class="token operator">--</span> 注册表类（保留）
+    AES <span class="token operator">--</span> AES加密（CSDN上的代码，我也没搞懂……）
+    ASSOCEXE <span class="token operator">--</span> 更改扩展名默认文件<span class="token operator">:</span>
+      ASSOCEXE<span class="token operator">::</span>getexten <span class="token operator">--</span> 获取文件扩展名
+      ASSOCEXE<span class="token operator">::</span>ExtenNoneSpace <span class="token operator">--</span> 去除文件扩展名后的空格
+      ASSOCEXE<span class="token operator">::</span>FilepathNoneSpace <span class="token operator">--</span> 去除文件名后的空格
+      ASSOCEXE<span class="token operator">::</span>help <span class="token operator">--</span> 帮助函数
+      ASSOCEXE<span class="token operator">::</span>show <span class="token operator">--</span> 显示扩展名及其绑定文件
+      ASSOCEXE<span class="token operator">::</span>show_s <span class="token operator">--</span> 显示现有扩展名
+      ASSOCEXE<span class="token operator">::</span>binding <span class="token operator">--</span> 更改扩展名绑定文件
+      ASSOCEXE<span class="token operator">::</span>split <span class="token operator">--</span> 判断格式是否正确<span class="token punctuation">(</span>是否含有<span class="token string">"&amp;"</span><span class="token punctuation">)</span>
+      ASSOCEXE<span class="token operator">::</span>__init__ <span class="token operator">--</span> 初始化变量tmpExten与tmpFilenamePath
+      ASSOCEXE<span class="token operator">::</span>ASSOCEXE <span class="token operator">--</span> 构造函数，初始化变量extension
+      ASSOCEXE<span class="token operator">::</span><span class="token operator">~</span>ASSOCEXE <span class="token operator">--</span> 析构函数，释放变量空间
+      ASSOCEXE<span class="token operator">::</span>ASSOC <span class="token operator">--</span> 接口，用于输入指令
+    <span class="token function">CDEXE</span><span class="token punctuation">(</span>CDK<span class="token punctuation">)</span> <span class="token operator">--</span> 切换磁盘<span class="token operator">:</span>
+      CDEXE<span class="token operator">::</span>help <span class="token operator">--</span> 帮助函数
+      CDEXE<span class="token operator">::</span>pos <span class="token operator">--</span> 查找子串位置
+      CDEXE<span class="token operator">::</span>changeMenu <span class="token operator">--</span> 更改磁盘目录
+      CDEXE<span class="token operator">::</span>CD <span class="token operator">--</span> 接口，用于输入指令
+    COLOREXE <span class="token operator">--</span>  更改颜色<span class="token operator">:</span>
+      COLOREXE<span class="token operator">::</span>settxtcolor <span class="token operator">--</span> 设置前景颜色
+      COLOREXE<span class="token operator">::</span>setcolor <span class="token operator">--</span> 设置颜色
+      COLOREXE<span class="token operator">::</span>COLOR <span class="token operator">--</span> 接口，用于输入指令
+    COUNTEREXE <span class="token operator">--</span> 计算器<span class="token operator">:</span>
+      COUNTEREXE<span class="token operator">::</span>level <span class="token operator">--</span> 判断运算符
+      COUNTEREXE<span class="token operator">::</span>in_setCheck <span class="token operator">--</span> 检测是否有无用符号
+      COUNTEREXE<span class="token operator">::</span>del_space <span class="token operator">--</span> 删除空格
+      COUNTEREXE<span class="token operator">::</span>to_string <span class="token operator">--</span> 转string
+      COUNTEREXE<span class="token operator">::</span>change <span class="token operator">--</span> 更改为后缀表达式（貌似是）
+      COUNTEREXE<span class="token operator">::</span>compute <span class="token operator">--</span> 计算
+      COUNTEREXE<span class="token operator">::</span>Judge_rectangle <span class="token operator">--</span> 判断是都有特殊符号
+      COUNTEREXE<span class="token operator">::</span>cal_rect_number <span class="token operator">--</span> 求三角函数
+      COUNTEREXE<span class="token operator">::</span>Judge_factorial <span class="token operator">--</span> 判断是否为求阶乘
+      COUNTEREXE<span class="token operator">::</span>cal_factorial_number <span class="token operator">--</span> 求阶乘数字
+      COUNTEREXE<span class="token operator">::</span>cal_factorial <span class="token operator">--</span> 利用数组求阶乘
+      COUNTEREXE<span class="token operator">::</span>COUNTER <span class="token operator">--</span> 接口，用于输入算式
+    CONFIGEXE <span class="token operator">--</span> 查看系统设置信息<span class="token operator">:</span>
+      CONFIGEXE<span class="token operator">::</span>help <span class="token operator">--</span> 帮助函数
+      CONFIGEXE<span class="token operator">::</span>ac <span class="token operator">--</span> 输出用户设置
+      CONFIGEXE<span class="token operator">::</span>aboutcpu <span class="token operator">--</span> 输出cpu信息
+      CONFIGEXE<span class="token operator">::</span>_adisk <span class="token operator">--</span> 输出磁盘信息
+      CONFIGEXE<span class="token operator">::</span>_kb <span class="token operator">--</span> 输出键盘信息
+      CONFIGEXE<span class="token operator">::</span>_ms <span class="token operator">--</span> 输出鼠标信息
+      CONFIGEXE<span class="token operator">::</span>_usb <span class="token operator">--</span> 输出USB接口信息
+      CONFIGEXE<span class="token operator">::</span>_a <span class="token operator">--</span> 命令转换并调用函数
+      CONFIGEXE<span class="token operator">::</span>CONFIG <span class="token operator">--</span> 接口，用于输入指令
+    Date <span class="token operator">--</span> 用于输出日期
+    parseHostAndPagePath <span class="token operator">--</span> 获取网页路径
+    GSCer <span class="token operator">--</span> 获取网页源代码
+    GetIPer <span class="token operator">--</span> 获取网址IP
+    HILLEXE <span class="token operator">--</span> Hill密码加密<span class="token operator">:</span>
+      HILLEXE<span class="token operator">::</span>HILLEXE <span class="token operator">--</span> 构造函数，功能的实现
+    INSTALLEXE <span class="token operator">--</span> 下载软件或插件<span class="token operator">:</span>
+      INSTALLEXE<span class="token operator">::</span>help <span class="token operator">--</span> 帮助函数
+      INSTALLEXE<span class="token operator">::</span>Delete <span class="token operator">--</span> 删除软件或插件
+      INSTALLEXE<span class="token operator">::</span>showOrinstall <span class="token operator">--</span> 显示或下载软件或插件
+      INSTALLEXE<span class="token operator">::</span>INSTALL <span class="token operator">--</span> 接口，用于输入命令
+    MEMORYEXE <span class="token operator">--</span> 内存使用查看
+      MEMORYEXE<span class="token operator">::</span>init <span class="token operator">--</span> 初始化
+      MEMORYEXE<span class="token operator">::</span>show <span class="token operator">--</span> 显示情况
+      MEMORYEXE<span class="token operator">::</span>MEMORYEXE <span class="token operator">--</span> 构造函数
+      MEMORYEXE<span class="token operator">::</span><span class="token operator">~</span>MEMORYEXE <span class="token operator">--</span> 析构函数，释放内存
+    VIRGINIAEXE <span class="token operator">--</span> Virginia密码加密
+      VIRGINIAEXE<span class="token operator">::</span>Init <span class="token operator">--</span> 初始化维吉尼亚方阵
+      VIRGINIAEXE<span class="token operator">::</span>Encode <span class="token operator">--</span> 加密
+      VIRGINIAEXE<span class="token operator">::</span>Dncode <span class="token operator">--</span> 解密
+      VIRGINIAEXE<span class="token operator">::</span>VIRGINIA <span class="token operator">--</span> 接口，用于输入文字
+    copyright <span class="token operator">--</span> 版权声明
+    help <span class="token operator">--</span> 主帮助函数
+    findSubStringNUM <span class="token operator">--</span> 统计字符出现次数
+    SystemDkInit <span class="token operator">--</span> 系统磁盘初始化
+    exits <span class="token operator">--</span> 退出函数（Ctrl<span class="token operator">+</span>C）
+    ADosMain <span class="token operator">--</span> 系统主函数
+    main <span class="token operator">--</span> 程序主函数 
+
+</code></pre>
+
+  </article>
+</body>
+</html>

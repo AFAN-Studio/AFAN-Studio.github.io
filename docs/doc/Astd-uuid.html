@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="md.css" />
+    <script src="back.js"></script>
+  <title>AFAN Studio -- document -- Astd -- uuid</title>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+  <style></style>
+</head>
+<body>
+    <button id="_back" onclick=On_Back("Astd.html")>返回</button>
+  <article class="markdown-body">
+  <h1 class="atx" id="astd-uuid">Astd-uuid</h1>
+<h2 class="atx" id="该库用于生成uuid">该库用于生成uuid</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UUID 是通用唯一识别码（Universally Unique Identifier）的缩写，是一种软件建构的标准，亦为开放软件基金会组织在分布式计算环境领域的一部分。其目的，是让分布式系统中的所有元素，都能有唯一的辨识信息，而不需要通过中央控制端来做辨识信息的指定。如此一来，每个人都可以创建不与其它人冲突的UUID。在这样的情况下，就不需考虑数据库创建时的名称重复问题。
+        标准的UUID格式为：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (8-4-4-4-12)</p>
+<h2 class="atx" id="代码">代码</h2>
+<h3 class="atx" id="宏定义">宏定义:</h3>
+<pre><code class="fenced-code-block language-cpp"><span class="token macro property">#<span class="token directive keyword">ifndef</span> __UUID__ </span><span class="token comment">//避免重复定义</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __UUID__ 202108L </span><span class="token comment">//版本，用于判断</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __UUID_VER_ "1.0.0" </span><span class="token comment">//版本</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __UUID_VER_F 1</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __UUID_VER_S 0</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __UUID_VER_T 0</span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+</code></pre>
+<h3 class="atx" id="类">类:</h3>
+<pre><code class="fenced-code-block language-cpp"><span class="token keyword">class</span> <span class="token class-name">UUID</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 class="atx" id="类成员函数">类成员函数:</h3>
+<pre><code class="fenced-code-block language-cpp"><span class="token keyword">class</span> <span class="token class-name">UUID</span><span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">UUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//构造函数, 生成一个UUID</span>
+    <span class="token operator">~</span><span class="token function">UUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//析构函数</span>
+    std<span class="token operator">::</span>string <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//重载(), 伪函数, 获取生成的UUID</span>
+    <span class="token keyword">void</span> <span class="token function">createUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//生成UUID</span>
+    std<span class="token operator">::</span>string <span class="token function">getUUID</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> ALXX_CONST<span class="token punctuation">;</span> <span class="token comment">//获取生成的UUID</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>                
+<span class="token keyword">operator</span><span class="token operator">&gt;&gt;</span><span class="token punctuation">(</span>UUID id<span class="token punctuation">,</span> std<span class="token operator">::</span>string<span class="token operator">&amp;</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//重载&gt;&gt;, 以流的形式获取UUID</span>
+</code></pre>
+<h3 class="atx" id="用法举例">用法举例:</h3>
+<pre><code class="fenced-code-block language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> &lt;iostream&gt;</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"uuid.h"</span></span>
+<span class="token keyword">using</span> std<span class="token operator">::</span>cout<span class="token punctuation">;</span>
+<span class="token keyword">using</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+<span class="token keyword">using</span> std<span class="token operator">::</span>string<span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> astd<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    UUID id<span class="token punctuation">;</span>
+    string str<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">id</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    id <span class="token operator">&gt;&gt;</span> str<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> str <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+  </article>
+</body>
+</html>

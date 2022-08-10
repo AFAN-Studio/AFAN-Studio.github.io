@@ -1,0 +1,72 @@
+﻿.menu{
+    margin:0;
+    padding:0;
+}
+
+.menu div{
+    background-color:#000000;
+    height:20%;
+    width:100%;
+    margin:0 0 0 0;
+}
+
+.menu a{
+    color:#ffffff;
+    font-size:40px;
+    text-decoration: none;
+    margin-left:1%;
+    margin-top:1%;
+    font-family:'Times New Roman';
+    cursor:pointer;
+}
+
+.menu a:hover{
+    color:#d4d4d4;
+    font-size:40px;
+    text-decoration: none;
+    margin-left:1%;
+    margin-top:1%;
+    font-family:'Times New Roman';
+}
+
+.mlst{
+    margin:0;
+    padding:0;
+}
+
+.mlst button{
+    background-color:rgba(0, 0, 0, 0.00);
+    font-size:24px;
+    color:#ffffff;
+    float:right;
+    display:inline;
+}
+
+.mlst button:hover{
+    background-color:rgba(200, 200, 200, 0.7);
+}
+
+.social-networks a:hover {
+  color: #7ba9d6;
+}
+
+#_title{
+    margin-top: 3%;
+    margin-left:15%;
+    margin-bottom:6%;
+    padding:1%;
+    background-color:#ffffff;
+	border-radius:20px;
+	width:70%;
+    box-shadow: rgba(92, 92, 92, 0.69) 10px 10px 10px;
+    border: 1px solid #000000;
+    vertical-align:middle;
+    font-family:"叶根友毛笔行书2.0版";
+    text-align:center;
+}
+
+#_title p{
+    font-family:KaiTi;
+    font-size: 20px;
+    padding-top: 20px;
+}

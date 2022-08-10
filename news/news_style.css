@@ -1,0 +1,24 @@
+﻿#_text{
+    background-color:#ffffff;
+    border-radius: 20px;
+    box-shadow:  rgba(92, 92, 92, 0.69) 10px 10px 10px;
+    border: 2px solid black;
+    width: 72%;
+    height:auto;
+    margin-left:15%;
+    margin-top: -3%;
+    margin-bottom: 2%;
+}
+
+#_text div{
+    
+}
+
+#_text p{
+    font-family: KaiTi;
+    font-size: 20px;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:2%;
+    padding-right:2%;
+}

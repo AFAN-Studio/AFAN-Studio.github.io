@@ -1,0 +1,45 @@
+﻿#_category{
+    width:70%;
+    height:auto;
+    margin-left: 15%;
+    margin-top:-3%;
+}
+
+#_category ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+#_category ul li{
+    list-style:none;
+    display: flex;
+    float:left;
+    width:310px;
+    margin-right: 2%;
+}
+
+#_dl_list{
+    padding:0;
+    margin:0;
+    width:310px;
+    cursor:pointer;
+    float:left;
+    margin-bottom:2%;
+}
+
+#_dl_list:hover{
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+#_dl_list img{
+    height: 270px;
+    width: 270px;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+
+#_dl_list h1{
+    font-family:KaiTi;
+    text-align: center;
+}

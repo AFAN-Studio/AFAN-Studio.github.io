@@ -1,0 +1,58 @@
+﻿.introduce{
+
+}
+
+#introduce_card_div{
+    margin-top: 5%;
+    margin-left:15%;
+    margin-bottom:2%;
+    background-color:#ffffff;
+	border-radius:20px;
+	width:70%;
+    box-shadow: rgba(92, 92, 92, 0.69) 10px 10px 10px;
+    border: 1px solid #000000;
+    vertical-align:middle;
+    float:left;
+}
+
+#introduce_card_p{
+    padding-left: 1%;
+    padding-top: 2%;
+    font-family: KaiTi;
+    color: black;
+    font-size: 22px;
+    width: 35%;
+    float:left;
+}
+
+#introduce_card_img{
+    margin-left:1%;
+    padding-top:1%;
+    padding-left:1%;
+    padding-bottom:6%;
+    width:478px;
+    height:468px;
+    display:inline;
+    float:left;
+}
+
+#introduce_card_p {
+    padding-left: 10%;
+    padding-top: 10px;
+    font-family: KaiTi;
+    color: black;
+    font-size: 22px;
+}
+
+.introduce div {
+    display:inline;
+    margin-top:2%;
+    margin-left:1%;
+    margin-bottom:2%;
+}
+
+.introduce h1{
+    padding: 2%;
+    font-family:"叶根友毛笔行书2.0版";
+}
+	

@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="md.css" />
+    <script src="back.js"></script>
+  <title>AFAN Studio -- document -- Astd -- type_max</title>
+
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+  <style></style>
+</head>
+<body>
+    <button id="_back" onclick=On_Back("Astd.html")>返回</button>
+  <article class="markdown-body">
+  <h1 class="atx" id="astd-type_max">Astd-type_max</h1>
+<p>该库用于获取各类型的最大值与最小值</p>
+<h2 class="atx" id="代码">代码</h2>
+<h3 class="atx" id="宏定义">宏定义:</h3>
+<pre><code class="fenced-code-block language-cpp"><span class="token macro property">#<span class="token directive keyword">ifndef</span> __TYPE_MAX__ </span><span class="token comment">//避免重复</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __TYPE_MAX__ 202108L</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __TYPE_MAX_VER_ "1.0.0"</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __TYPE_MAX_VER_F 1</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __TYPE_MAX_VER_S 0</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __TYPE_MAX_VER_T 0</span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+</code></pre>
+<h3 class="atx" id="函数">函数:</h3>
+<pre><code class="fenced-code-block language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">int_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//int最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">int_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//int最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">unsigned</span> <span class="token keyword">int</span> <span class="token function">uint_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//unsigned int最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">unsigned</span> <span class="token keyword">int</span> <span class="token function">uint_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//unsigned int最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">long</span> <span class="token function">long_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//long最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">long</span> <span class="token function">long_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//long最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token function">ulong_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//unsigned long最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token function">ulong_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//unsigned long最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">short</span> <span class="token function">char_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//char最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">short</span> <span class="token function">char_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//char最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">short</span> <span class="token function">short_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//short最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">short</span> <span class="token function">short_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//short最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">unsigned</span> <span class="token keyword">short</span> <span class="token function">ushort_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//unsigned short最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">unsigned</span> <span class="token keyword">short</span> <span class="token function">ushort_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//unsigned short最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">bool_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//bool最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">bool_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//bool最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">ullong_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//long long最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">ullong_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//long long最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">float</span> <span class="token function">float_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//float最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">float</span> <span class="token function">float_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//float最小值</span>
+<span class="token keyword">inline</span> <span class="token keyword">double</span> <span class="token function">double_max</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//double最大值</span>
+<span class="token keyword">inline</span> <span class="token keyword">double</span> <span class="token function">double_min</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//double最小值</span>
+</code></pre>
+<h3 class="atx" id="用法">用法举例:</h3>
+<pre><code class="fenced-code-block language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> &lt;iostream&gt;</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"type_max.h"</span></span>
+<span class="token keyword">using</span> std<span class="token operator">::</span>cout<span class="token punctuation">;</span>
+<span class="token keyword">using</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> astd<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">int_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">int_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">uint_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">uint_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">long_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">long_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">ulong_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">ulong_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">ullong_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">ullong_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">char_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">char_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">short_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">short_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">ushort_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">ushort_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">bool_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">bool_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">float_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">float_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">double_max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token function">double_min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h5 class="atx" id="输出">输出:</h5>
+<pre><code class="fenced-code-block language-cpp"><span class="token number">2147483647</span>
+<span class="token operator">-</span><span class="token number">2147483648</span>
+<span class="token number">4294967295</span>
+<span class="token number">0</span>
+<span class="token number">9223372036854775807</span>
+<span class="token operator">-</span><span class="token number">9223372036854775808</span>
+<span class="token number">18446744073709551615</span>
+<span class="token number">0</span>
+<span class="token number">9223372036854775807</span>
+<span class="token operator">-</span><span class="token number">9223372036854775808</span>
+<span class="token number">127</span>
+<span class="token operator">-</span><span class="token number">128</span>
+<span class="token number">32767</span>
+<span class="token operator">-</span><span class="token number">32768</span>
+<span class="token number">65535</span>
+<span class="token number">0</span>
+<span class="token number">1</span>
+<span class="token number">0</span>
+<span class="token number">3.40282e+38</span>
+<span class="token number">1.17549e-38</span>
+<span class="token number">1.79769e+308</span>
+<span class="token number">2.22507e-308</span>
+</code></pre>
+
+  </article>
+</body>
+</html>
