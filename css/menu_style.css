@@ -8,6 +8,11 @@
     src: url("../res/YGYXSZITI2.0.TTF");
 }
 
+@font-face {
+    font-family: "KaiTi";
+    src: url("../res/SIMKAI.TTF");
+}
+
 .menu div{
     background-color:#000000;
     height:20%;
