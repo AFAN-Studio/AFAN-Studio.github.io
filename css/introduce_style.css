@@ -2,6 +2,11 @@
 
 }
 
+@font-face {
+    font-family: "叶根友毛笔行书2.0版";
+    src: url("../res/YGYXSZITI2.0.TTF");
+}
+
 #introduce_card_div{
     margin-top: 5%;
     margin-left:15%;
