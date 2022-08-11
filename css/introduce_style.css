@@ -25,16 +25,6 @@
     float:left;
 }
 
-#introduce_card_p{
-    padding-left: 1%;
-    padding-top: 2%;
-    font-family: KaiTi;
-    color: black;
-    font-size: 22px;
-    width: 50%;
-    float:left;
-}
-
 #introduce_card_img{
     margin-left:1%;
     padding-top:1%;
@@ -49,11 +39,14 @@
 }
 
 #introduce_card_p {
-    padding-left: 10%;
+    padding-left: 5%;
     padding-top: 10px;
+	padding-right: 5%;
     font-family: KaiTi;
     color: black;
-    font-size: 22px;
+    font-size: 22px;;
+    float:left;
+	vertical-align:middle;
 }
 
 .introduce div {
