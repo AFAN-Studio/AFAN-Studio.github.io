@@ -60,14 +60,14 @@
             float:left;
 			padding-left:11%;
             position:relative;
-            display:inline;
+            display:inline-block;
             margin-right:1%;
             margin-top:12%;
 		}
 		.arrow.arrow-right{
 			float:right;
             position:relative;
-            display:inline;
+            display:inline-block;
             margin-right:11%;
             margin-top:12%;
 		}
