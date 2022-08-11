@@ -20,12 +20,12 @@
 }
 
 #demo1{
-    margin-top:2%;
+   margin-top:2%;
    max-width:70%;
    max-height: 100%;
    width:auto;
    height:auto;
-   display:inline-block;
+   display:inline;
    float:left;
    margin-left: 15%;
 }
