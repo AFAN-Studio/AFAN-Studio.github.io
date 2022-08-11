@@ -27,11 +27,11 @@
 
 #introduce_card_p{
     padding-left: 1%;
+	padding-right: 1%;
     padding-top: 2%;
     font-family: KaiTi;
     color: black;
     font-size: 22px;
-    width: 50%;
     float:left;
 }
 
@@ -64,6 +64,7 @@
 
 #for_intr_p{
 	text-align: center;
+	margin-bottom: 2%;
 }
 
 .introduce div {
