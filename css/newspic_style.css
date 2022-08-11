@@ -57,8 +57,8 @@
             border-radius: 50%;
 		}
 		.arrow.arrow-left{
-            /*float:left;*/
-			margin-left:11%;
+            float:left;
+			padding-left:11%;
             position:relative;
             display:inline;
             margin-right:1%;
@@ -68,7 +68,7 @@
 			float:right;
             position:relative;
             display:inline;
-            margin-right:11%;
+            margin-right:211px;
             margin-top:12%;
 		}
         .arrow:hover{
