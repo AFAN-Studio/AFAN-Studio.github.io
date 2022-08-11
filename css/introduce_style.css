@@ -56,6 +56,11 @@
     font-size: 22px;
 }
 
+#for_intr{
+	display:inline-block;
+	vertical-align: middle;
+}
+
 .introduce div {
     display:inline;
     margin-top:2%;
