@@ -56,9 +56,14 @@
     font-size: 22px;
 }
 
-#for_intr{
+#for_intr_img{
 	display:flex;
-	vertical-align: middle;
+	justify-content: center;
+	align-items:center;
+}
+
+#for_intr_p{
+	text-align: center;
 }
 
 .introduce div {
