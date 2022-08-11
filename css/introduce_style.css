@@ -48,6 +48,12 @@
     float:left;
 }
 
+#for_intr_img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .introduce div {
     display:inline;
     margin-top:2%;
