@@ -27,7 +27,7 @@
    height:auto;
    display:inline-block;
    float:left;
-   /*margin-left: 15%;*/
+   margin-left: 15%;
 }
 		
 		.indexes li{
@@ -57,7 +57,7 @@
             border-radius: 50%;
 		}
 		.arrow.arrow-left{
-            float:left;
+            /*float:left;*/
 			margin-left:11%;
             position:relative;
             display:inline;
