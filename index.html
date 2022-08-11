@@ -148,7 +148,7 @@ function setCookie(name,value,expires,path,domain,secure)
  ((path)?"; path=" + path : "") +
  ((domain)? "; domain=" + domain : "") +
  ((secure)?";secure" : "")
- if(!caution||(name + "=" + escape(value)).length <= 4000);
+ if(!caution||(name + "=" + escape(value)).length <= 4000)
  {
  document.cookie = curCookie;
  }
