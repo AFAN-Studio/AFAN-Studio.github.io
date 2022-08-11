@@ -28,6 +28,7 @@
    display:inline;
    float:left;
    margin-left: 15%;
+   transform: translateY(-50%);
 }
 		
 		.indexes li{
