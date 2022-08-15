@@ -25,6 +25,7 @@
             <a class="menu" onclick="On_ClickBackThis()">AFAN Studio</a>
             <a id="for_list" href="download/download_index.html">下载</a>
             <a id="for_list" href="docs/docs_index.html">文档</a>
+            <a id="for_list" href="news/news_index.html">公告</a>
         </div>
     </div>
 
@@ -39,11 +40,12 @@
 	<div class="arrow arrow-right" onclick="next()">></div>
     <div style="height:500px;">
         <div class="arrow arrow-left" onclick="prev()"><</div>
-		<img id="demo1" src="res/News/First_News.jpg" onclick="On_ClickNews()">
+		<img id="demo1" src="res/News/new_v1.1.0.jpg" onclick="On_ClickNews()">
 
 	</div>
     <div style="margin-left:48%;margin-top:50px;float:left;margin-top:-12%"><ul class="indexes">
         <li class="active"></li>
+        <li></li>
         <li></li>
     </ul></div>
     <!--Introduce-->
@@ -64,7 +66,8 @@
         	<p align="justify" id="introduce_card_p">我们所有的作品都将会开源到Github和学而思编程社区中，
         	我们所开发的大部分库、作品与软件是免费的，我们用爱发电（doge）</p>
         	<p align="justify" id="introduce_card_p">我们的团队正在壮大中，欢迎你的加入(邮箱地址:afanstudio@163.com)</p>
-        	<p id="introduce_card_p">室长:郭墨轩 <br /> Github:https://github.com/Naruto-123k <br /> 邮箱:jxxx016768@163.com</p>
+            <p align="justify" id="introduce_card_p"><b>如何加入我们:</b>写一份简历（简单写一写就好，格式没必要那么严格），包括自己的基本信息、会的语言、专注于哪方面的技术，发到我们的邮箱(afanstudio@163.com)，审核过后会拉您进入考核群（两个工作日左右（? ），之后会发放给您一份试题（别太紧张，就摸摸底），您提交后我们会根据您的成绩拉您进入相对应的群，其他事情进群后会有通知</p>
+            <p id="introduce_card_p">室长:郭墨轩 <br /> Github:https://github.com/Naruto-123k <br /> 邮箱:jxxx016768@163.com</p>
         	<p id="introduce_card_p" style="margin-bottom:2%;">副室长:徐力陈 <br /> Github:https://github.com/rhsu001 <br /> 邮箱:includeall2020@163.com</p>
 		</div>
     </div>
@@ -89,12 +92,14 @@
     }
     //下面是图片的地址链接
     let arr = [
+        "res/News/new_v1.1.0.jpg",
         "res/News/First_News.jpg",
         "res/News/New_Doc.jpg"
     ]
 
     //图片绑定的链接
     let href = [
+        "news/Update.html",
         "news/first_establish.html",
         "docs/docs_index.html"
     ]
@@ -137,73 +142,4 @@
         indexes[index].classList.add("active")
     }
     run()
-</script>
-	
-<script type="text/javascript">
-var caution=false;
-function setCookie(name,value,expires,path,domain,secure) 
-{
- var curCookie=name+"="+escape(value) +
- ((expires)?";expires="+expires.toGMTString() : "") +
- ((path)?"; path=" + path : "") +
- ((domain)? "; domain=" + domain : "") +
- ((secure)?";secure" : "")
- if(!caution||(name + "=" + escape(value)).length <= 4000)
- {
- document.cookie = curCookie;
- }
- else if(confirm("Cookie exceeds 4KB and will be cut!"))
- {
- document.cookie = curCookie;
- }
-}
-function getCookie(name) 
-{
- var prefix = name + "=";
- var cookieStartIndex = document.cookie.indexOf(prefix);
- if (cookieStartIndex == -1)
- {
- return null;
- }    
- var cookieEndIndex=document.cookie.indexOf(";",cookieStartIndex+prefix.length);
- if(cookieEndIndex == -1)
- {
- cookieEndIndex = document.cookie.length;
- }
- return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex));
-}
-function deleteCookie(name, path, domain) 
-{
- if(getCookie(name)) 
- {
- document.cookie = name + "=" + 
- ((path) ? "; path=" + path : "") +
- ((domain) ? "; domain=" + domain : "") +
- "; expires=Thu, 01-Jan-70 00:00:01 GMT"
- }
-}
-function fixDate(date) 
-{
- var base=new Date(0);
- var skew=base.getTime();
- if(skew>0)
- {
- date.setTime(date.getTime()-skew);
- }    
-}
-var now=new Date();
-fixDate(now);
-now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000);
-var visits = getCookie("counter");
-if(!visits)
-{
- visits=1;
-}  
-else
-{
- visits=parseInt(visits)+1;
-}  
-setCookie("counter", visits, now);
-console.log("彬彬你又在看控制台啦？(");
-console.log("您是到访的第" + visits + "位用户");
 </script>
