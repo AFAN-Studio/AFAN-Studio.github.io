@@ -94,14 +94,16 @@
     let arr = [
         "res/News/new_v1.1.0.jpg",
         "res/News/First_News.jpg",
-        "res/News/New_Doc.jpg"
+        "res/News/New_Doc.jpg",
+        "res/News/HowtoUse.jpg"
     ]
 
     //图片绑定的链接
     let href = [
         "news/Update.html",
         "news/first_establish.html",
-        "docs/docs_index.html"
+        "docs/docs_index.html",
+        "docs/doc/HowtoUse.html"
     ]
     var demo1 = document.getElementById('demo1')
 			
@@ -121,13 +123,12 @@
     }
     var index = 0
     function run() {
-        timer = setInterval(() => {
-            index++
+            timer = setInterval()
+                index++
 				
-            if(index === arr.length) index = 0
+                if(index === arr.length) index = 0
 				
-       setStyle()
-    }, 3000);
+           setStyle()
     }
 
     function On_ClickNews(){
